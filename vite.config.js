@@ -4,14 +4,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [React()],
-  server: {
-    host: true,
-  },
   plugins: [
-    tailwindcss(),
+    React(),
+    tailwindcss()
   ],
   server: {
+    host: true,
     proxy: {
       '/services': 'http://localhost:5000'
     }
