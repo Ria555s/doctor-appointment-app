@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './BookAppointment.css';
+import './bookappointment.css';
 import axios from 'axios';
 
 const BookAppointment = () => {
