@@ -10,6 +10,7 @@ export default defineConfig({
   ],
   server: {
     host: true,
+    allowedHosts: ['doctor-appointment-app-ksqr.onrender.com'],
     proxy: {
       '/services': 'http://localhost:5000'
     }
