@@ -1,5 +1,5 @@
 import React from 'react';
-import './PatientDashboard.css';
+import './patientdashboard.css';
 
 
 
