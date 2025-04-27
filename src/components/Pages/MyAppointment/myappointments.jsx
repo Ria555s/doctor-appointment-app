@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './MyAppointment.css';
+import './myappointment.css';
 import medicalImage from './images/medical.jpg';
 import { Eye } from 'lucide-react';
 
