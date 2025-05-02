@@ -1,7 +1,14 @@
-# Doctor-appointment web application
+# Doctor-Appointment Web Application
 
 ## Introduction
 This is a simple and efficient Doctor Appointment web application built with the help of ChatGPT. It allows patients to schedule appointments, manage their personal and medical information, and view details in an organized dashboard. Designed with usability in mind, this system helps streamline the process of booking and managing doctor visits.
+
+## To run this project on your local machine, follow these steps:
+Clone the project repository from GitHub: git clone
+Install the project dependencies by running: npm inatall
+Ensure you have MongoDB installed and running on your local machine.
+Start the application node app.js This application will start and listen on port 3000. You can access the API through the provided endpoints.
+
 
 ## React + Vite
 
@@ -35,14 +42,15 @@ Visit http://localhost:3000 to use the app.
 
 
 # Tech Stack:
-* Frontend: React / Vue / HTML+CSS+JS
+Frontend: React (Vite), Tailwind CSS, Axios, JavaScript, HTML
 
-* Backend: Node.js / Django / Flask
+Backend: Node.js, Express.js
 
-* Database: MongoDB / PostgreSQL / MySQL
+Database: MongoDB
 
-* Extras: JWT/Auth, REST APIs, Bootstrap/Tailwind
+API Testing: Postman
 
+UI: Responsive layout with reusable components
 
 # Overview
 
