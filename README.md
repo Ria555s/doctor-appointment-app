@@ -1,4 +1,4 @@
-#Doctor-appointment web application
+# Doctor-appointment web application
 
 ## Introduction
 This is a simple and efficient Doctor Appointment web application built with the help of ChatGPT. It allows patients to schedule appointments, manage their personal and medical information, and view details in an organized dashboard. Designed with usability in mind, this system helps streamline the process of booking and managing doctor visits.
