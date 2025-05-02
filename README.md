@@ -38,7 +38,7 @@ Frontend: npm run dev
 Backend: node server.js
 
 Access the App
-Visit http://localhost:3000 to use the app.
+Visit http://localhost:5000 to use the app.
 
 
 # Tech Stack:
