@@ -5,7 +5,8 @@ import dotenv from 'dotenv';
 import multer from 'multer';
 import path from 'path';
 import Appointment from './src/models/AppointmentModel.js';
-import appointmentRouter from './src/components/routes/myappointment.js'; // THIS is now correct
+import Patient from './src/models/PatientModel.js';
+import appointmentRouter from './src/components/routes/myappointment.js'; 
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use('/appointments', appointmentRouter); 
+
 
 //post request
 app.post('/appointments', async (req, res) => {
@@ -85,6 +86,32 @@ app.get('/services', (req, res) => {
     "Dental Checkup"
   ]);
 });
+
+//patientdetails
+// POST - Add new patient
+app.post('/api/patients', async (req, res) => {
+  try {
+    const patient = new Patient(req.body);
+    await patient.save();
+    res.status(201).json({ message: 'Patient data saved to MongoDB successfully', data: patient });
+  } catch (err) {
+    console.error('Error saving patient:', err);
+    res.status(500).json({ message: 'Failed to save patient data' });
+  }
+});
+
+// GET - Retrieve all patients
+app.get('/api/patients', async (req, res) => {
+  try {
+    const patients = await Patient.find();
+    res.status(200).json(patients);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching patients' });
+  }
+});
+
+
+
 
 // Server start
 app.listen(5000, () => {

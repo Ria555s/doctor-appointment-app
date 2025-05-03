@@ -12,7 +12,8 @@ export default defineConfig({
     host: true,
     allowedHosts: ['doctor-appointment-app-ksqr.onrender.com'],
     proxy: {
-      '/services': 'http://localhost:5000'
+      '/services': 'http://localhost:5000',
+      '/api': 'http://localhost:3000',
     }
   }
 });

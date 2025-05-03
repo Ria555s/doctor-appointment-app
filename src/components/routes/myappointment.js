@@ -34,6 +34,27 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Create a new patient
+router.post('/add', async (req, res) => {
+  try {
+    const patient = new Patient(req.body);
+    await patient.save();
+    res.status(201).json({ message: 'Patient added successfully' });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+});
+
+// (Optional) Get all patients
+router.get('/', async (req, res) => {
+  try {
+    const patients = await Patient.find();
+    res.json(patients);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 export default router;
 
 

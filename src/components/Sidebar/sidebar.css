@@ -1,57 +1,85 @@
 .sidebar {
-      width: 200px;
-      background-color: #f8f9fa;
-      padding: 20px;
-      height: 100vh;
-      border-right: 1px solid #e0e0e0;
-    }
-    
-    .profile-section {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
-    .profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      margin-left: 28px;
-    }
-    
-    .profile-section h3 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    
-    .profile-section p {
-      font-size: 13px;
-      color: gray;
-    }
-    
-    .sidebar-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .sidebar-buttons button {
-      padding: 10px;
-      border: none;
-      background-color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-    
-    .sidebar-buttons button:hover {
-      background-color: #eaeaea;
-    }
-    
-    .sidebar-buttons button:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
+  width: 200px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  height: 100vh;
+  border-right: 1px solid #e0e0e0;
+  transition: transform 0.3s ease;
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.sidebar-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-buttons button {
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.sidebar-buttons button:hover {
+  background-color: #eaeaea;
+}
+
+/* Mobile-specific styles */
+.hamburger {
+  background: white;
+  color: purple;
+  border: none;
+  font-size: 16px;
+  padding: 13px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 1px;
+  margin-left: 4px;
+  margin-top: 5px;
+  z-index: 2000;
+}
+
+.sidebar.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 70%;
+  max-width: 250px;
+  background-color: #f8f9fa;
+  transform: translateX(-100%);
+  z-index: 1500;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar.mobile.open {
+  transform: translateX(0);
+}
+
+/* Hide sidebar on mobile by default */
+@media (max-width: 768px) {
+  .sidebar:not(.open) {
+    display: none;
+  }
+}
+
+
     

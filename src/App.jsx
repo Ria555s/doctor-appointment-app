@@ -4,10 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/auth/Login/login.jsx';
 import Signup from './components/auth/Signup/signup.jsx';
 
+
 import MyProfile from "./components/Pages/MyProfile/myprofile.jsx";
 import BookAppointment from "./components/Pages/BookAppointment/bookappointment.jsx";
 import MyAppointment from "./components/Pages/MyAppointment/myappointments.jsx";
 import PatientDashboard from './components/Pages/PatientDashboard/patientdashboard.jsx';
+import Patient from "./components/Pages/Patient/patient.jsx"; 
+
 import Services from './components/Pages/Services/services.jsx';
 import Header from "./components/Header/header.jsx";
 import Sidebar from "./components/Sidebar/sidebar.jsx";
@@ -35,8 +38,11 @@ function App() {
         {/* Routes with Dashboard layout */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        
+        {/*Sidebar button */}
         <Route path="/" element={<DashboardLayout><PatientDashboard /></DashboardLayout>} />
+        <Route path="/patient" element={<DashboardLayout><Patient /></DashboardLayout>} />
+
+         {/*Dashboard pages */}
         <Route path="/patientdashboard" element={<DashboardLayout><PatientDashboard /></DashboardLayout>} />
         <Route path="/myprofile" element={<DashboardLayout><MyProfile /></DashboardLayout>} />
         <Route path="/services" element={<DashboardLayout><Services /></DashboardLayout>} />
